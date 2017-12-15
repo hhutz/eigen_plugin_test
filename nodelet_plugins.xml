@@ -1,0 +1,14 @@
+<library path="lib/libplugin1">
+  <class name="Nodelet1" type="Nodelet1" base_class_type="nodelet::Nodelet">
+    <description>
+      First nodelet.
+    </description>
+  </class>
+</library>
+<library path="lib/libplugin2">
+  <class name="Nodelet2" type="Nodelet2" base_class_type="nodelet::Nodelet">
+    <description>
+      Second nodelet.
+    </description>
+  </class>
+</library>

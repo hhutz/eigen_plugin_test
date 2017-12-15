@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>eigen_plugin_test</name>
+  <version>0.1.0</version>
+  <description>The services of the NISSAN Automous Vehicle project.</description>
+  <maintainer email="hans.utz@nissan-usa.com">Hans Utz</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <run_depend>nodelet</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>roscpp</run_depend>
+  
+  <export> 
+    <nodelet plugin="${prefix}/nodelet_plugins.xml" />
+  </export>
+</package>
