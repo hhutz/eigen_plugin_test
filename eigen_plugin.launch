@@ -1,8 +1,13 @@
 <?xml version="1.0" ?>
 <launch>
 
-  <node pkg="nodelet" type="nodelet" name="manager" args="manager" output="screen" />
-  <node pkg="nodelet" type="nodelet" name="Nodelet2" args="load Nodelet2 manager" />
+  <arg name="manager" default="true"/>
+  <arg name="nodelet1" default="true"/>
+  <arg name="nodelet2" default="true"/>
+  
+  <node if="$(arg manager)" pkg="nodelet" type="nodelet" name="manager" args="manager" output="screen" />
+  <node if="$(arg nodelet1)" pkg="nodelet" type="nodelet" name="Nodelet1" args="load Nodelet1 manager" />
+  <node if="$(arg nodelet2)" pkg="nodelet" type="nodelet" name="Nodelet2" args="load Nodelet2 manager" />
 
 </launch>
 
